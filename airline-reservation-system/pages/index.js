@@ -71,4 +71,4 @@ export default function Home() {
 
 var msg = 'Joshua';
 console.log(msg);
-msg.charAt;
+
