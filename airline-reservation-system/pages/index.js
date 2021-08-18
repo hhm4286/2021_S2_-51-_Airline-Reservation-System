@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   console.log("joseph")
+  console.log("joshua")
   return (
     <div className={styles.container}>
       <Head>
@@ -70,6 +71,5 @@ export default function Home() {
 }
 
 
-var msg = 'Joshua';
-console.log(msg);
+
 
