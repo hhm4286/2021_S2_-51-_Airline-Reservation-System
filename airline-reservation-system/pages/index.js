@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   console.log("joseph")
   console.log("joshua")
+  console.log("bond")
   return (
     <div className={styles.container}>
       <Head>
