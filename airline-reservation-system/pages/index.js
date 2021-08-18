@@ -67,3 +67,8 @@ export default function Home() {
     </div>
   )
 }
+
+
+var msg = 'Joshua';
+console.log(msg);
+msg.charAt;
