@@ -1,11 +1,8 @@
-import Head from 'next/head'
+import Head from 'next/head' // for custom title, meta-tags, keywords, descriptions, etc.
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
-  console.log("joseph")
-  console.log("joshua")
-  console.log("bond")
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +14,6 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
-          yo
         </h1>
 
         <p className={styles.description}>
