@@ -1,0 +1,53 @@
+// @import '../../global.scss';
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background-color: teal;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1.5s ease;
+    
+    hr {
+        margin-bottom: 5px;
+    }
+
+    &.active{
+        right: 0;
+    }
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+    width: 60%;
+
+    li{
+        margin-bottom: 20px;
+        transition: all 0.7s ease;
+
+        /* items */
+        a{
+            font-size: inherit;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* When click the item, the text will be bold */
+        &:hover{
+            font-weight: 410;
+            color: black;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.container {
+    margin-left: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+@media (max-width:670px) {
+    .container {
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+}

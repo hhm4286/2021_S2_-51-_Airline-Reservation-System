@@ -1,0 +1,24 @@
+.flights {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.economy {
+    width: 0%;
+    object-fit: cover;
+}
+
+/* .business {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.firstClass {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+} */

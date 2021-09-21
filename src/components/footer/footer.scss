@@ -1,0 +1,92 @@
+.footer {
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    border-top: 3px solid teal;
+    flex: 6px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.footerLeftSide {
+    font-family: 'Merienda', cursive;
+    margin-left: 50px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+    flex-direction: column;
+}
+
+.text {
+    color: white;
+    font-size: 13px;
+}
+
+.footerCentre {
+    color: white;
+    font-family: 'Merienda', cursive;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+    margin-right: 30px;
+    flex-direction: column;
+}
+
+.footerRightSide {
+    color: white;
+    font-family: 'Merienda', cursive;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.footerIcon {
+    margin-left: 20px;
+    color: darkgoldenrod;
+}
+
+.bottomLeft {
+    color: white;
+    cursor: pointer;
+}
+
+.Follow {
+    padding-bottom: 0px;
+    /* border-top: 2px solid white;
+    border-bottom: 2px solid white; */
+}
+
+.fbIcon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.socialMediaIcons {
+    flex: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.copyRight {
+    padding-top: 40px;
+    font-size: 15px;
+}
+
+.cr {
+    width: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,49 @@
+.featuresTitle {
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: 'Merienda', cursive;
+    display: flex;
+    justify-content: center;
+}
+
+.featureWrapper {
+    // margin: 0px 20px 40px 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.featureWords{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fast {
+    margin-left: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.reliability {
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.conversation {
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.deals {
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+}

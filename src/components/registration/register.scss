@@ -1,0 +1,89 @@
+.register {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.registerWrapperOne {
+    top: 50px;
+    width: 50%;
+    height: 300px;
+    background-color: goldenrod;
+}
+
+.registerTitle {
+    font-family: 'Merienda', cursive;
+    color: black;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.registerSubTitle {
+    font-family: 'Merienda', cursive;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.registerWrapperTwo {
+    width: 50%;
+    height: 300px;
+    background-color: dodgerblue;
+}
+
+.registerButton {
+    // padding-bottom: 10px;
+    // padding-top: 10px;
+    // background-color: black;
+    // color: goldenrod;
+    // font-size: 20px;
+    // border-radius: 50px;
+    // border-color: 5px solid white;
+    // height: 50px;
+    // width: 30%;
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid black;
+    color: black;
+    padding: 0.50em 2.5em;
+    font-family: 'Merienda', cursive;
+    cursor: pointer;
+    margin: auto;
+    display: grid;
+
+    &:hover {
+        background-color: white;
+        transition: all 0.5s ease;
+    }
+    
+}
+
+.wrapperTwoTitle {
+    margin-top: 10px;
+    font-family: 'Merienda', cursive;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tickIcon {
+    width: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.items {
+    color: whitesmoke;
+    font-weight: 330;
+    padding: 10px;
+    margin-left: 20px;
+    display: flex;
+    font-size: 20px;
+    align-self: center;
+}

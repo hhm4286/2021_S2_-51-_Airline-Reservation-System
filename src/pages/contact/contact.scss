@@ -1,0 +1,34 @@
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-color: crimson;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../../images/airlines/airplane2.jpg');
+    background-size: cover;
+
+}
+
+.contactHeading{
+    font-size: 30px;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    font-size: 30px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contactEmail{
+    width: 100px;
+    height: 100px;
+}
+
+
+

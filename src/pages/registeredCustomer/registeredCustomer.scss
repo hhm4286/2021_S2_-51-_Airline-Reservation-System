@@ -1,0 +1,105 @@
+.sidebar{
+    width: 16%;
+    height: 100vh;
+    background-color: slateblue;
+    position: fixed;
+    border-right: 2px solid black;
+}
+
+.main-content{
+    width: 84%;
+    margin-left: 16%;
+    background-color: darkslategray;
+    min-height: 100vh;
+    // background-image: url(../../images/airlines/wall2.jpg);
+    display: grid;
+    color: beige;
+    position: relative;
+}
+
+.NavBar{
+
+    height: 100vh;
+
+    .nav{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .profile{
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+            border-bottom: 2px solid black;
+
+            img{
+                width: 40%;
+                border-radius: 100%;
+                // border: 1px solid black;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .nav-items{
+            width: 100%;
+
+            .nav-item {
+                list-style: none;
+                text-align: center;
+                margin-right: 50px;
+
+                a{
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-weight: 350;
+                    color: inherit;
+                    display: block;
+                    padding: .8rem 0;
+                    position: relative;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        // width: .4rem;
+                        height: 100%;
+                        // background-color: #0381ff33;
+                        background-color: #0981ff33;
+                        border-radius: 50%;
+                        transform-origin: bottom;
+                        transform: scale(0);
+                        overflow-x: hidden; 
+                        transition: transform .6s, .5s width .5s cubic-bezier(1, -0.16, .6,1.35);
+                    }
+
+                    &:hover::before{
+                        width: 100%;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        .footer{
+            width: 100%;
+            border-top: 2px solid black;
+
+            p{
+                font-size: 20px;
+                font-weight: 350;
+                text-align: center;
+                padding: 1rem 0;
+            }
+        }
+    }
+    
+}
+
+.active{
+    background-color: seashell;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
