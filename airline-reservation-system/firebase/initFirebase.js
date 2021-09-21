@@ -17,7 +17,7 @@ const clientCredentials = {
 }
 
 
-export function initFirebase() {
+export default function initFirebase() {
   if (!firebase.apps.length) {
       firebase.initializeApp(clientCredentials)
       // Check that `window` is in scope for the analytics module!
@@ -30,12 +30,12 @@ export function initFirebase() {
 
 
 //Firebase functions to export
-const db = firebase.firestore();
-const auth = firebase.auth();
+//const db = firebase.firestore();
+//const auth = firebase.auth();
 
 
-export {
-  db,
- auth
-}
-export default firebase;
+//export {
+  //db,
+ //auth
+//}
+//export default firebase;
