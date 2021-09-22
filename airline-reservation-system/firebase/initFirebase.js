@@ -1,10 +1,7 @@
 import firebase from 'firebase/app'
-// the below imports are option - comment out what you don't need
 import 'firebase/auth'
 import 'firebase/firestore'
-//import 'firebase/storage'
-//import 'firebase/analytics'
-//import 'firebase/performance'
+
 
 const clientCredentials = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -20,7 +17,6 @@ const clientCredentials = {
 export default function initFirebase() {
   if (!firebase.apps.length) {
       firebase.initializeApp(clientCredentials)
-      // Check that `window` is in scope for the analytics module!
       }
       console.log('Firebase was successfully init.')
   }
