@@ -11,7 +11,7 @@ export default function Home() {
         const { register, handleSubmit, errors} = useForm();              
         function onSubmitForm(values) {
               console.log(values);
-
+              
               
 
 
@@ -89,7 +89,7 @@ export default function Home() {
         </div>
         
         <div class="d-grid">
-           <button class="btn btn-primary btn-md" type="submit">Search</button>
+           <button class="btn btn-primary btn-md"  href="./signin" type="submit">Search</button>
              
         </div>
     </form>
