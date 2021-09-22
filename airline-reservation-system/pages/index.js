@@ -2,10 +2,8 @@ import styles from '../styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import { db } from './api/database'
 
 export default function Home() {
-  console.log(db.app)
   return (
     <div className={styles.container}>
     <Header></Header>

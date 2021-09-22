@@ -1,11 +1,7 @@
 import React from 'react'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import BTable from 'react-bootstrap/Table';
-
 import { useTable } from 'react-table'
-
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 
@@ -33,7 +29,7 @@ function Table({ columns, data }) {
             {rows.map((row, i) => {
             prepareRow(row)
             return (
-                <tr {...row.getRowProps()}>
+                <tr style={{textAlign:'center'}} {...row.getRowProps()}>
                 {row.cells.map(cell => {
                     return (
                     <td {...cell.getCellProps()}>
@@ -94,7 +90,88 @@ function App() {
     []
   )
 
-  const data = React.useMemo(() => getBooking(), [])
+  const data = React.useMemo(() => [
+    {
+      "bookingID": "AGHDA586",
+      "flightID": "APS788",
+      "departureCity": "Auckland",
+      "destinationCity": "Wellington",
+      "departureDate": "12-12-21 17:30",
+      "seatNum": "G7",
+      "seatType": "Economy",
+      "ticketType": "Adult"
+    },
+    {
+      "bookingID": "PABJY563",
+      "flightID": "BNM510",
+      "departureCity": "Auckland",
+      "destinationCity": "Queenstown",
+      "departureDate": "01-01-22 09:15",
+      "seatNum": "B2",
+      "seatType": "Business",
+      "ticketType": "Adult"
+    },
+    {
+      "bookingID": "HMAOP123",
+      "flightID": "PES728",
+      "departureCity": "Dunedin",
+      "destinationCity": "Christchurch",
+      "departureDate": "15-11-21 13:45",
+      "seatNum": "F2",
+      "seatType": "Business",
+      "ticketType": "Adult"
+    },
+    {
+      "bookingID": "HAIPA010",
+      "flightID": "AIH297",
+      "departureCity": "Rotorua",
+      "destinationCity": "Invercargill",
+      "departureDate": "01-12-21 16:30",
+      "seatNum": "D1",
+      "seatType": "Premium Economy",
+      "ticketType": "Child"
+    },
+    {
+      "bookingID": "NTAUS511",
+      "flightID": "KTB852",
+      "departureCity": "Hastings",
+      "destinationCity": "Auckland",
+      "departureDate": "22-11-21 20:15",
+      "seatNum": "C5",
+      "seatType": "Economy",
+      "ticketType": "Adult"
+    },
+    {
+      "bookingID": "DGUHS585",
+      "flightID": "BAT222",
+      "departureCity": "Auckland",
+      "destinationCity": "Christchurch",
+      "departureDate": "09-10-21 06:30",
+      "seatNum": "H1",
+      "seatType": "Premium Economy",
+      "ticketType": "Adult"
+    },
+    {
+      "bookingID": "HATOG102",
+      "flightID": "MON527",
+      "departureCity": "Palmerston North",
+      "destinationCity": "Christchurch",
+      "departureDate": "24-10-21 05:45",
+      "seatNum": "A2",
+      "seatType": "Business",
+      "ticketType": "Adult"
+    },
+    {
+      "bookingID": "YASHH529",
+      "flightID": "TKN151",
+      "departureCity": "Dunedin",
+      "destinationCity": "Napier",
+      "departureDate": "04-11-21 10:00",
+      "seatNum": "B9",
+      "seatType": "Economy",
+      "ticketType": "Child"
+    }
+  ], [])
 
   return (
       <div className="container">
@@ -107,25 +184,13 @@ function App() {
   )
 }
 
-// function getBooking()
-// {
-//     return
-//     (
-//         {
-//             [
-//                 {
-//                     bookingID: "543869453",
-//                     flightID: "5437AGC",
-//                     departureCity: "Auckland",
-//                     destinationCity: "Wellington",
-//                     departureDate: "07/10/2021",
-//                     seatNum: "54B",
-//                     seatType: "ECONOMY",
-//                     ticketType: "Adult"
-//                 }
-//             ]
-//         }
-//     )
-// }
+function getBooking()
+{
+    return [
+
+    ]
+}
+
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default App
