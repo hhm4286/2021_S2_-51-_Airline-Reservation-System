@@ -1,14 +1,10 @@
-import '../styles/globals.css';
 import { AuthProvider } from '../components/auth';
-import { ThemeProvider, ColorModeProvider } from '@chakra-ui/core';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return(
-    
-
-  <Component {...pageProps} />
-
- 
+    <AuthProvider>    <Component {...pageProps} />
+</AuthProvider>
   )
 };
 

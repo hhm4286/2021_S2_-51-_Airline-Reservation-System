@@ -3,58 +3,79 @@ import React, {useState} from "react"
 import firebase from "firebase/app";
 import "firebase/auth";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container} from 'react-bootstrap'
-import { useAuth }  from '../components/auth'
 
-export default function Login() {
+export default function Signup() {
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
 
     return (
         <div>
-           <h1 className = "row justify-content-center">Join Skyhub today!</h1>
-        <Head><title>Sign up - Skyhub</title></Head>
+            <Head><title>Sign up - Skyhub</title></Head>
 
-        <div className = "container">
-            <label htmlFor = "exampleInputEmail1">Email address</label>
-            <input 
-            type = "email" 
-            className = "form-control" 
-            id = "emailAddress" 
-            aria-describedby = "emailHelp" 
-            placeholder = "Email..." 
-            value = {email}
-            required
-            onChange = {(e) => setEmail(e.target.value)}/>
-                        <small id = "emailHelp" className = "form-text text-muted">‎‎</small>
-
+            <div className = "container-fluid">
+                <nav className = "navbar navbar-expand-lg navbar-light bg-light">
+                <a className = "navbar-brand" href = "#">© Skyhub</a>
+            <div className = "collapse navbar-collapse" id = "navbarNavDropdown">
+                <ul className = "navbar-nav">
+                    <li className ="nav-item active">
+                        <a className ="nav-link" href = "/">Home <span className = "sr-only"></span></a>
+                    </li>
+                        <li className = "nav-item">
+                            <a className = "nav-link" href = "/covid">COVID-19</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
         </div>
-        
-        <div className = "container">
-        <label htmlFor = "password">Password (6 or more characters)</label>
             
-            <input 
-            
-            type = "password" 
-            className ="form-control" 
-            id = "password" 
-            placeholder = "Password..." 
-            value = {pass}
-            required
-            onChange = {(e) => setPass(e.target.value)}/>
-            Already have an account? <a href = "/login" className = "text-decoration-none">Sign in </a>
+        <div className = "d-flex justify-content-center align-items-center">
+            <div className = "row">
+                <div className = "col-md-0">
+                    <div className = "card">
+                        <div className = "card-header bg-primary text-white text-center">
+                            <h3>To get started, enter your email and password</h3>
+                        </div>
+                            <div className = "card-body">
+                                <form>
+                                    <label htmlFor = "exampleInputEmail1">Email address</label>
+                                        <input 
+                                        type = "email" 
+                                        className = "form-control" 
+                                        id = "emailAddress" 
+                                        aria-describedby = "emailHelp" 
+                                        placeholder = "Email..." 
+                                        value = {email}
+                                        required
+                                        onChange = {(e) => setEmail(e.target.value)}/>
+                                        <small id = "emailHelp" className = "form-text text-muted">‎‎</small>
+
+                                    <label htmlFor = "password">Password (6 or more characters)</label>
+                                        <input 
+                                        type = "password" 
+                                        className ="form-control" 
+                                        id = "password" 
+                                        placeholder = "Password..." 
+                                        value = {pass}
+                                        required
+                                        onChange = {(e) => setPass(e.target.value)}/>
+                                        Already have an account? <a href = "/login" className = "text-decoration-none">Sign in </a>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     
         <div className = "form-row text-center">
-        <button onClick = {async () => {
-            await firebase.auth().createUserWithEmailAndPassword(email, pass).then(function(){
-                window.location.href = "/"
-            }).catch(function (error) {
-                const message = error.message;
-            }) 
-        }} 
-        type= "submit" 
-        className ="btn btn-primary">Submit</button>
+            <button onClick = {async () => {
+                await firebase.auth().createUserWithEmailAndPassword(email, pass).then(function(){
+                    window.location.href = "/profile"
+                }).catch(function (error) {
+                    console.log(error)
+                }) 
+            }} 
+            type = "submit" 
+            className = "btn btn-primary">Sign up</button>
         </div>
     </div>
     )

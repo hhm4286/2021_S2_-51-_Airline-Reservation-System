@@ -4,13 +4,12 @@ import "firebase/firestore";
 
 // Initialize Firebase
 const firebaseConfig = {
-    apiKey:  "AIzaSyBpcAPk6e3JqXN7dxZV40pWJsZVR504FMM",
-    authDomain: "skyhub-8c268.firebaseapp.com",
-    projectId: "skyhub-8c268",
-    storageBucket: "skyhub-8c268.appspot.com",
-    messagingSenderId: "239635786799",
-    appId: "1:239635786799:web:33f3cc47112a2ffe8feada",
-    measurementId: "G-0RBYTCJNXX",
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 // Check if Firebase is already initialised

@@ -3,7 +3,7 @@ const admin = require("firebase-admin");
 const serviceAccount = require("../../skyhub.json");
 
 // Initialising the SDK
-export const verifyIDToken = (token) => {
+export const verifyIdToken = (token) => {
     if (!admin.apps.length) {
         admin.initializeApp({
             credential: admin.credential.cert(serviceAccount),
@@ -14,7 +14,7 @@ export const verifyIDToken = (token) => {
     // Returning the verification of the JSON Token as a promise
     return admin
     .auth()
-    .verifyIDToken(token)
+    .verifyIdToken(token)
     .catch((error) => {
         throw error;
     })
