@@ -54,6 +54,9 @@ export default function CartPage() {
       <p>
         <strong>Sub total:</strong> {subtotal.formatted_with_symbol}
       </p>
+
     </div>
+
+    
   );
 }

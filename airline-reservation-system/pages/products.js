@@ -17,7 +17,6 @@ export default function ProductsPage({ products }) {
   return (
     <React.Fragment>
       <h1>Products</h1>
-
       <ProductList products={products} />
     </React.Fragment>
   );
