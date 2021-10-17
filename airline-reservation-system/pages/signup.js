@@ -37,6 +37,19 @@ export default function Signup() {
                         </div>
                             <div className = "card-body">
                                 <form>
+
+                                <label htmlFor = "usernameLabel">Name</label>
+                                        <input 
+                                        type = "username" 
+                                        className = "form-control" 
+                                        id = "userName" 
+                                        aria-describedby = "userHelp" 
+                                        placeholder = "Name..." 
+                                   
+                                        required
+                                        />
+
+
                                     <label htmlFor = "exampleInputEmail1">Email address</label>
                                         <input 
                                         type = "email" 
@@ -48,6 +61,7 @@ export default function Signup() {
                                         required
                                         onChange = {(e) => setEmail(e.target.value)}/>
                                         <small id = "emailHelp" className = "form-text text-muted">‎‎</small>
+                                        
 
                                     <label htmlFor = "password">Password (6 or more characters)</label>
                                         <input 
@@ -58,7 +72,7 @@ export default function Signup() {
                                         value = {pass}
                                         required
                                         onChange = {(e) => setPass(e.target.value)}/>
-                                        Already have an account? <a href = "/login" className = "text-decoration-none">Sign in </a>
+                                        Already have an account? <a href = "/loginuser" className = "text-decoration-none">Sign in </a>
                                 </form>
                         </div>
                     </div>
@@ -68,8 +82,11 @@ export default function Signup() {
     
         <div className = "form-row text-center">
             <button onClick = {async () => {
-                await firebase.auth().createUserWithEmailAndPassword(email, pass).then(function(){
+                await firebase.auth().createUserWithEmailAndPassword(email, pass).then(function(result){
                     window.location.href = "/profile"
+                    return result.user.updateProfile({
+                        displayName : document.getElementById("username").value
+                    })
                 }).catch(function (error) {
                     console.log(error)
                 }) 

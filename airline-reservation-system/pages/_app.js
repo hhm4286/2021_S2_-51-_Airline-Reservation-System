@@ -1,14 +1,13 @@
-import { AuthProvider } from '../components/auth';
-import '../styles/globals.css';
+import '../styles/globals.css'
+import { CartProvider } from '../context/cart'
+import { ToastProvider } from 'react-toast-notifications'
 
 function MyApp({ Component, pageProps }) {
-  return(
-    <AuthProvider>    <Component {...pageProps} />
-</AuthProvider>
-  )
-};
+  return (
+    <CartProvider>
+    <Component {...pageProps} />
+    </CartProvider>
+  );
+}
 
 export default MyApp;
-
-// MyApp - function taking in our pages components and page props
-  // returns - wraps around the page components
