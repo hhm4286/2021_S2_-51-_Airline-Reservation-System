@@ -7,7 +7,9 @@ class SearchBar extends React.Component {
   };
 
   render() {
+
     return (
+
       <div className="search">
         <form onSubmit={this.handleSubmit}>
           <input type="text" placeholder="Zip Code" />
@@ -16,6 +18,7 @@ class SearchBar extends React.Component {
         </form>
       </div>
     );
+
   }
 }
 

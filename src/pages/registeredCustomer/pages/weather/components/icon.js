@@ -1,4 +1,4 @@
-let thunderStorm = [
+const thunderStorm = [
   200,
   201,
   202,
@@ -11,7 +11,7 @@ let thunderStorm = [
   232
 ];
 
-let drizzle = [
+const drizzle = [
   300,
   301,
   302,
@@ -23,7 +23,7 @@ let drizzle = [
   321
 ];
 
-let rain = [
+const rain = [
   500,
   501,
   502,
@@ -36,7 +36,7 @@ let rain = [
   531
 ];
 
-let snow = [
+const snow = [
   600,
   601,
   602,
@@ -50,7 +50,7 @@ let snow = [
   622
 ];
 
-let atmosphere = [
+const atmosphere = [
   701,
   711,
   721,

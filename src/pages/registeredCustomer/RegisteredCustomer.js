@@ -4,6 +4,7 @@ import React from 'react';
 import Home from './pages/home/Home';
 import CoronaTracker from './pages/covid-19/CoronaTracker';
 import WeatherApp from './pages/weather/WeatherApp';
+import ChatBot from './pages/chatbot/Chatbot';
 import Ticket from './pages/ticket/Ticket';
 import { Switch, Route } from 'react-router-dom';
 
@@ -25,6 +26,9 @@ function RegisteredCustomer() {
                         </Route>
                         <Route path="/WeatherChecker" exact>
                             <WeatherApp />
+                        </Route>
+                        <Route path="/ChatBot" exact>
+                            <ChatBot />
                         </Route>
                         <Route path="/BuyTicket" exact>
                             <Ticket />

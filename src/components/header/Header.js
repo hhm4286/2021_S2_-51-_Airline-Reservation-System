@@ -5,8 +5,8 @@ import Feature from '../features/Feature';
 import Register from '../registration/Register';
 import Destinations from '../destinations/Destinations';
 import Stuffs from '../stuffs/Stuffs';
+// import ChatBot from '../chatbot/ChatBot.js';
 import Footer from '../footer/Footer';
-
 
 export default function Header() {
     return (
@@ -23,6 +23,7 @@ export default function Header() {
                 <Destinations />
                 <Stuffs />
                 <Footer />
+                {/* <ChatBot /> */}
             </div>
             {/* <Feature /> */}
         </>

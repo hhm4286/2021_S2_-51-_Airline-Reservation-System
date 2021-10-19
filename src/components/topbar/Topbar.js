@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'; /* { useState } */
 import './topbar.scss';
 import { Link } from "react-router-dom";
 // import ReorderIcon from "@material-ui/icons/Reorder";
@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 export default function Topbar({ menuOpen, setMenuOpen }) {
 
-    const [openLinks, setOpenLinks] = useState(false);
+    // const [openLinks, setOpenLinks] = useState(false);
 
-    const toggleTopbar = () => {
-        setOpenLinks(!openLinks);
-    };
+    // const toggleTopbar = () => {
+    //     setOpenLinks(!openLinks);
+    // };
 
     return (
         <>
@@ -19,17 +19,20 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
                     <a href="#header" className="name">Sky hub</a>
                     <i className="topIcon far fa-paper-plane"></i>
                 </div>
-                <div className="topCentre " id={openLinks ? "open" : "close"}>
+                <div className="topCentre "> {/* id={openLinks ? "open" : "close"} */}
                     <ul className="topList">
                         {/* <li className="topListItem2">Home</li> */}
                         <Link className="link" to="/">Home</Link>
                     </ul>
                     <ul className="topList">
                         {/* <li className="topListItem2">About</li> */}
-                        <Link className="link" to="/about">About</Link>
+                        <Link className="link" to="/cart">Cart</Link>
                     </ul>
                     <ul className="topList">
-                        <Link className="link" to="/contact">Contact</Link>
+                        <Link className="link" to="/product">Product</Link>
+                    </ul>
+                    <ul className="topList">
+                        <Link className="link" to="/categories">Categories</Link>
                     </ul>
                     <ul className="topList">
                         <Link className="link" to="/flight">Book a flight</Link>

@@ -2,12 +2,14 @@ import React from 'react';
 import { LocationSearchAPI } from '../APIKeys.js';
 
 class LocationSearchBar extends React.Component {
+
+  // constructor
   constructor(props) {
     super(props);
     this.state = {
       data: null,
       queryText: "",
-      showList: false,
+      showList: false
     };
   }
 
@@ -32,6 +34,7 @@ class LocationSearchBar extends React.Component {
   }
 
   handleClick = (featureIndex) => {
+
     let features = this.state.data.features[featureIndex];
     let longitude = features.geometry.coordinates[0];
     let latitude = features.geometry.coordinates[1];
@@ -64,9 +67,14 @@ class LocationSearchBar extends React.Component {
     return (
       <div className="locationSearchBar">
         <div className="location-search-container">
-          <input type="text" onChange={this.handleChange} value={this.state.queryText} onBlur={this.handleBlur}
+
+          <input
+            type="text" onChange={this.handleChange}
+            value={this.state.queryText}
+            onBlur={this.handleBlur}
             placeholder="Search for location"
           />
+
           {this.state.showList &&
             <ul className="searchList">
 
@@ -74,6 +82,7 @@ class LocationSearchBar extends React.Component {
               {this.state.data && this.state.data.features && this.state.data.features.length > 0 &&
                 this.state.data.features.map((data, index) => {
                   return (
+
                     <li key={index}
                       className="options"
                       onClick={() => {

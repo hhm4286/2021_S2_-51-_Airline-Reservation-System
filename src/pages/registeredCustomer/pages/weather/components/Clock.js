@@ -2,6 +2,7 @@ import React from 'react';
 
 class Clock extends React.Component {
 
+  // constructor 
   constructor(props) {
     super(props);
     this.state = {
@@ -17,16 +18,18 @@ class Clock extends React.Component {
 
   getTime = (offset) => {
 
-    let date = new Date();
-    let localTime = date.getTime();
-    let localOffset = date.getTimezoneOffset() * 60000;
+    const date = new Date();
+    const localTime = date.getTime();
 
-    // obtain UTC time in msec
-    let utc = localTime + localOffset;
+    const offsetDivisor = 60000;
+    const fetchTimeOffset = date.getTimezoneOffset() * offsetDivisor;
+
+    // fetch UTC(Coordinated Universal Time) time in msec
+    const utc = localTime + fetchTimeOffset;
 
     // create new Date object for different city
     // using supplied offset
-    let newDate = new Date(utc + (1000 * offset));
+    const newDate = new Date(utc + (1000 * offset));
 
     if (newDate.getHours() > 18 || (newDate.getHours() >= 0 && newDate.getHours() <= 4)) {
       this.props.day_Night('n');
@@ -57,23 +60,23 @@ class Clock extends React.Component {
       seconds = '0' + seconds;
     }
 
-    let ampm = "am";
+    var setClock = "am";
 
     if (hours > 12) {
       hours = hours - 12;
-      ampm = 'pm';
+      setClock = 'pm';
     } else if (hours === 0) {
       hours = 12;
-      ampm = 'am'
+      setClock = 'am'
     } else if (hours === 12) {
-      ampm = 'pm'
+      setClock = 'pm'
     }
 
     if (this.props.data.main) {
 
       return (
         <div className="clock">
-          <h2>{hours}:{minutes}:{seconds} {ampm}</h2>
+          <h2>{hours}:{minutes}:{seconds} {setClock}</h2>
         </div>
       );
     } else {

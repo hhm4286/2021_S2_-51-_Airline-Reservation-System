@@ -29,6 +29,11 @@ export default function NavBar() {
                             </NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink to='/ChatBot' exact activeClassName="active">
+                                Chat Bot
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink to='/BuyTicket' exact activeClassName="active">
                                 Buy ticket
                             </NavLink>

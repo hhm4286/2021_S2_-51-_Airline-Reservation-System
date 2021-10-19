@@ -1,7 +1,9 @@
 import React from 'react';
 
 class Temperature extends React.Component {
+
   render() {
+
     let temperature, temperature_min, temperature_max;
 
     if (this.props.data.main) {

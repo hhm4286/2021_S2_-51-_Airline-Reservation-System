@@ -2,6 +2,9 @@ import React from 'react';
 // import { transform } from '@babel/core';
 
 class OtherWeatherData extends React.Component {
+
+
+
   getSunsetSunRise = (timestamp) => {
     let date = new Date(timestamp * 1000);
     let time = date.getTime();
@@ -34,6 +37,10 @@ class OtherWeatherData extends React.Component {
   }
 
   render() {
+
+    const MiDivisor = 1609.344;
+    const PaDivisor = 1000;
+
     if (this.props.data.main) {
       let sunrise = this.props.data.sys.sunrise;
       let sunset = this.props.data.sys.sunset;
@@ -44,31 +51,38 @@ class OtherWeatherData extends React.Component {
       return (
         <div className="otherWeatherData">
           <div className="windSpeed">
+
             <h1>{this.props.data.wind.speed} m/s</h1>
-            <img src="./arrow.png" className="arrow" alt="direction" style={transform} />
             <h2>Wind</h2>
+
           </div>
+
           <div className="weatherInfoContainer">
             <div className="left_block">
-              <h1>{(this.props.data.visibility / 1609.344).toFixed(2)} MI</h1>
+              <h1>{(this.props.data.visibility / MiDivisor).toFixed(2)} MI</h1>
               <h2>Visibility</h2>
 
-              <h1>{this.props.data.main.pressure / 1000} Pa</h1>
+              <h1>{this.props.data.main.pressure / PaDivisor} Polar air</h1>
               <h2>Pressure</h2>
             </div>
+
             <div className="right_block">
               <h1>{this.props.data.main.humidity} %</h1>
               <h2>Humidity</h2>
               <div className="setRise">
+
                 <div className='sunrise'>
                   <h1>{this.formatTime(this.getSunsetSunRise(sunrise))}</h1>
                   <h2>Sunrise</h2>
                 </div>
+
                 <div className='sunset'>
                   <h1>{this.formatTime(this.getSunsetSunRise(sunset))}</h1>
                   <h2>Sunset</h2>
                 </div>
+
               </div>
+
             </div>
           </div>
         </div>

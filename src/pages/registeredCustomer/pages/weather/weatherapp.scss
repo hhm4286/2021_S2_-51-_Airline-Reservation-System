@@ -16,16 +16,16 @@
   font-size: 16px;
   background-color: transparent;
   padding: 9px 10px;
-  border-bottom: 1px solid cyan;
+  border-bottom: 1px solid white;
   outline: none;
-  color: cyan;
+  color: white;
   width: 100%;
   cursor: text;
 }
 
 .locationSearchBar input[type=text]::-webkit-input-placeholder {
   /* Edge */
-  color: cyan;
+  color: white;
 }
 
 .searchList {
@@ -40,7 +40,7 @@
 }
 
 .options {
-  border-bottom: 1px solid cyan;
+  border-bottom: 1px solid orange;
   border-radius: 5px;
   padding: 10px 30px;
   max-width: 100%;
@@ -73,7 +73,7 @@
   top: 8%;
   left: 5%;
   right: 5%;
-  background-color: cyan;
+  background-color: white;
   transition: all 0.5s ease;
 }
 
@@ -101,12 +101,12 @@ input[type="checkbox"].switch:checked+.slider>.circle {
 
 .Container {
   padding: 80px 100px;
-  color: cyan;
+  color: orange;
 }
 
 .weatherTitle {
   font-size: 1.3em;
-  color: cyan;
+  color: white;
 }
 
 .icon {
@@ -123,7 +123,7 @@ input[type="checkbox"].switch:checked+.slider>.circle {
   display: inline-block;
   vertical-align: baseline;
   width: 150px;
-  color: cyan;
+  color: white;
 }
 
 .temperature h1 {
@@ -147,13 +147,13 @@ input[type="checkbox"].switch:checked+.slider>.circle {
   margin-top: 10px;
   width: 60%;
   font-family: 'Fira Sans', sans-serif;
-  color: cyan;
+  color: white;
 }
 
 .right-section {
   width: 40%;
   font-family: 'Fira Sans', sans-serif;
-  color: cyan;
+  color: white;
   font-size: 0.9em;
 }
 
@@ -170,7 +170,7 @@ input[type="checkbox"].switch:checked+.slider>.circle {
 
 .windSpeed {
   padding-left: 10px;
-  border-bottom: 2px solid cyan;
+  border-bottom: 2px solid white;
   padding-right: 10px;
   margin-bottom: 10px;
   padding-bottom: 5px;

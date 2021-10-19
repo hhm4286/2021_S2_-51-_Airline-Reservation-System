@@ -23,7 +23,7 @@ export default function Home() {
             showCursor: true,
             strings: [" Happy browsing", "Have a great day", "Have a great time"],
             startDelay: 10,
-            strings: [" Happy browsing ^_^", "Have a great day", "Have a great time"]
+            // strings: [" Happy browsing ^_^", "Have a great day", "Have a great time"]
         })
     }, [])
 

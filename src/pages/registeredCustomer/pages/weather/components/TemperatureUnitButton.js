@@ -8,7 +8,6 @@ class TemperatureUnitButton extends React.Component {
   render() {
     return (
       <div className="unitConverter">
-        <p className="tempUnit">&#8451;</p>
         <div className="switchContainer">
           <label>
             <input type="checkbox" checked={!this.props.isCelcius} onChange={this.handleChange} className="switch" />

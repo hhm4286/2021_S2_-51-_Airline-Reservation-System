@@ -4,16 +4,16 @@ import { WeatherAPI } from '../APIKeys.js';
 class WeatherData extends React.Component {
 
   getMyLocation = () => {
-    let location = null;
-    let latitude = null;
-    let longitude = null;
+    var place = null;
+    var latitude = null;
+    var longitude = null;
 
     if (window.navigator && window.navigator.geolocation) {
-      location = window.navigator.geolocation
+      place = window.navigator.geolocation
     }
 
-    if (location) {
-      location.getCurrentPosition((position) => {
+    if (place) {
+      place.getCurrentPosition((position) => {
         latitude = (position.coords.latitude);
         longitude = (position.coords.longitude);
         this.props.setLatLong(latitude, longitude);
@@ -23,7 +23,7 @@ class WeatherData extends React.Component {
     }
   }
 
-  newData = (data) => {
+  getNewData = (data) => {
     this.props.newData(data);
   }
 
@@ -32,7 +32,7 @@ class WeatherData extends React.Component {
     fetch(url)
       .then(results => results.json())
       .then((wdata) => {
-        this.newData(wdata);
+        this.getNewData(wdata);
       });
   }
 
@@ -42,8 +42,8 @@ class WeatherData extends React.Component {
     }
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.latitude !== prevProps.latitude || this.props.longitude !== prevProps.longitude) {
+  componentDidUpdate(previousProps) {
+    if (this.props.latitude !== previousProps.latitude || this.props.longitude !== previousProps.longitude) {
       this.fetchDataByGeo(this.props.latitude, this.props.longitude);
     }
   }
