@@ -8,11 +8,9 @@ export default function CategoryList({ categories }) {
     <ul>
       {categories.map((category) => (
         <li key={category.slug} style ={{listStyle:'none'}}>
-          <Link href={`/categories/${category.slug}`}>
-            <a>
-              <Category {...category} />
-            </a>
-          </Link>
+            <h5>
+              <a className = "text-decoration-none text-black" href="/product" role="button" >Flights</a>
+            </h5>
         </li>
       ))}
     </ul>

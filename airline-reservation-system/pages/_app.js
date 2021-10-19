@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 import { CartProvider } from '../context/cart'
-import { ToastProvider } from 'react-toast-notifications'
 
 function MyApp({ Component, pageProps }) {
   return (

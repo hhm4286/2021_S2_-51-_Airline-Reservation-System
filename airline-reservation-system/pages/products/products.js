@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Product({ name, price, description }) {
+export default function Product({ name, price }) {
     return (
     <div>
       <div className = "card p-3 mb-2 bg-light text-white">

@@ -10,10 +10,10 @@ export default function ProductList({ products }) {
     <ul>
       <div className = "d-flex container p-3 mb-2 bg-light align-items-center align-self-stretch" >
       {products.map((product) => (
-        <li key = {product.permalink} style ={{listStyle:'none'}}>
+        <li key = {product.permalink} style = {{listStyle:'none'}}>
           <Link href={`/products/${product.permalink}`}>
             <p>
-               <Product {...product} />
+               <Product {...product}/>
             </p>
           </Link>
         </li>

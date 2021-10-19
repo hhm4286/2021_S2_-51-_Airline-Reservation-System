@@ -51,7 +51,7 @@ const InvalidPage = () => {
                   <h6 className = "display-2">404 Error</h6>
                   <h1 className = "card-title display-1 text"><strong>OOPS! PAGE NOT FOUND.</strong></h1>
                     <p className = "card-text">The page you're looking for does not exist!</p>
-                    <a className = "btn btn-primary btn-lg" href = "/" role = "button">BACK TO HOME</a>
+                    <a className = "btn btn-primary btn-lg" href = "/" role = "button"><strong>BACK TO HOME</strong></a>
                   </div>
                 </div>
               </div>
