@@ -20,7 +20,7 @@ export default function ProductsPage({ products }) {
   return (
     <>
     <React.Fragment>
-      <Head><title>Products - Skyhub</title></Head>
+      <Head><title>Flights - Skyhub</title></Head>
       <div className = "d-flex align-items-center bg-light" >
             <nav className ="navbar navbar-expand-lg navbar navbar-light bg-light">
                 <button className = "navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,9 +36,6 @@ export default function ProductsPage({ products }) {
                 <a class="nav-link" href="/">HOME</a>
               </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">COVID-19</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="/product">SERVICES</a>
                 </li>  
                 <li class = "nav-item">
@@ -51,7 +48,7 @@ export default function ProductsPage({ products }) {
 
     <div className = "d-flex align-items-center justify-content-center p-3 mb-2 bg-light text-black" style = {{ height: "100vh" }}>
       <div class = "container-fluid fixed-bottom"><p class = "text-center"></p><p class = "text-center">© 2021 Skyhub</p>
-        </div>
+    </div>
 
       <ProductList products = {products} />
     </div>

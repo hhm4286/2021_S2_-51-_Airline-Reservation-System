@@ -4,7 +4,7 @@ import commerce from "../lib/commerce";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head';
 
-function CartItem({ id, name, quantity, line_total, variantData }) {
+function CartItem({ id, name, quantity, line_total }) {
   const { setCart } = useCartDispatch();
 
   const handleUpdateCart = ({ cart }) => setCart(cart);
@@ -14,13 +14,15 @@ function CartItem({ id, name, quantity, line_total, variantData }) {
   const decrementQuantity = () => {
     quantity > 1
       ? commerce.cart
-          .update(id, { quantity: quantity - 1 }, variantData)
+          .update(id, { quantity: quantity - 1 })
           .then(handleUpdateCart)
       : removeItem();
   };
 
+
+
   const incrementQuantity = () =>
-    commerce.cart.update(id, { quantity: quantity + 1 }, variantData).then(handleUpdateCart);
+    commerce.cart.update(id, { quantity: quantity + 1 }).then(handleUpdateCart);
 
   return (
   <div className = "d-flex align-items-center justify-content-center p-3 mb-2 bg-light text-white">
@@ -31,8 +33,7 @@ function CartItem({ id, name, quantity, line_total, variantData }) {
         <input className = "form-control" type = "text" placeholder = {name} readOnly/>
         Price
         <input className = "form-control" type = "text" placeholder = {line_total.formatted_with_symbol} readOnly/>
-        Class
-        <input className = "form-control" type = "text" placeholder = {variantData} readOnly/>ㅤ
+        ㅤ
         <div>
           <button className = "btn btn-light text-dark" onClick={decrementQuantity}><strong>-</strong></button>⠀
           <button className = "btn btn-light text-dark"><strong>{quantity}</strong></button>⠀
@@ -81,13 +82,14 @@ export default function CartPage() {
   </div>
 
   <div>
-    <div className="d-flex align-items-center justify-content-center p-3 mb-2 bg-light text-dark" style={{ height: "100vh" }}>
-      <div className = "container">
+    <div className="d-flex align-items-center justify-content-center p-3 mb-2 bg-light text-dark" >
+      <div className = "container p-3 mb-2 bg-light text-dark">
         <div className = "row">
           <div className = "col-sm">
             <div className = "card text-center">
               <div className = "card-body">
-                [IMAGE]
+              <img class="card-img-top" src="618woUnsjeL_286x180.png" alt="Card image cap"/>
+
                 <h5 className = "card-title">EMPTY CART!</h5>
                   <p className = "card-text">Looks like you do not currently have any bookings with us yet.</p>
                   <p className = "card-text">Get started by exploring your options below!</p>
@@ -109,7 +111,7 @@ export default function CartPage() {
           <button className = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarTogglerDemo03" aria-controls = "navbarTogglerDemo03" aria-expanded = "false" aria-label = "Toggle navigation">
             <span className = "navbar-toggler-icon"></span>
           </button>  
-                    <nav className = "navbar navbar-light bg-light">
+                    <nav className = "navbar navbar-light bg-light ">
                       ㅤ<a className = "navbar-brand mb-0 h1" href = "/">Skyhub</a>
                     </nav>
                 
@@ -119,7 +121,7 @@ export default function CartPage() {
                 <a className = "nav-link" href = "/">HOME</a>
               </li>
               <li className = "nav-item">
-                <a className = "nav-link" href = "#">COVID-19</a>
+                <a className = "nav-link" href = "/covid">COVID-19</a>
               </li>
               <li className = "nav-item">
                 <a className = "nav-link" href = "/product">SERVICES</a>
@@ -132,7 +134,7 @@ export default function CartPage() {
         </nav>
       </div>
    
-   <div className = "container-fluid align-items-center p-3 mb-2 bg-light text-white" style = {{ height: "100vh" }}>
+   <div className = "container-fluid align-items-center p-3 mb-2 bg-light text-white"style = {{ height: "100vh" }} >
      <div className = "container-fluid align-items-center p-3 mb-2 bg-light text-white">
         {/* <h1 className="text-center text-dark">YOUR FLIGHTS</h1>  */}
         {line_items.map((item) => (
@@ -142,7 +144,7 @@ export default function CartPage() {
       <hr />
       <h6 className = "text-center text-dark"><strong>SUB-TOTAL </strong>‎‎{subtotal.formatted_with_symbol}</h6>
       </div>
-        <div className = "container p-3 mb-2 bg-light text-white" >
+        <div className = "container p-3 mb-2 bg-light text-dark" >
           <div className ="row">
             <div className = "col text-center">
               <button className = "btn btn-dark">CHECKOUT</button>
@@ -150,7 +152,7 @@ export default function CartPage() {
           </div>
         </div>
     </div>
-    <div className = "container-fluid fixed-bottom"><p className = "text-center"></p><p className = "text-center">© 2021 Skyhub</p></div>
+    <div className = "d-flex container-fluid fixed-bottom justify-content-center p-3 mb-2 bg-light text-dark"><p className = "text-center"></p><p className = "text-center">© 2021 Skyhub</p></div>
   </div>
   );
 }
