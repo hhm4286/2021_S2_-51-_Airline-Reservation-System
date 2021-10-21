@@ -3,6 +3,7 @@ import React from 'react';
 import commerce from "../lib/commerce";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Head from 'next/head';
+import CheckoutButton from "./checkout";
 
 function CartItem({ id, name, quantity, line_total }) {
   const { setCart } = useCartDispatch();
@@ -147,7 +148,7 @@ export default function CartPage() {
         <div className = "container p-3 mb-2 bg-light text-dark" >
           <div className ="row">
             <div className = "col text-center">
-              <button className = "btn btn-dark">CHECKOUT</button>
+              <CheckoutButton></CheckoutButton>
             </div>
           </div>
         </div>
