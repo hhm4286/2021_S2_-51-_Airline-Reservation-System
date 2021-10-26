@@ -19,5 +19,5 @@
 
 # REACT - JS 
 * First thing to do is to open the terminal by clicking Ctrl + j on the keyboard in Visual Studio Code and type 'npm install'
-* Seconly, to run the project, click `npm start` with the waiting time around 10 seconds and it will automatically guide you to the [localhost:3000](http://localhost:3000) to whatever browser used in your computer / laptop.
+* Secondly, to run the project, click `npm start` with the waiting time around 10 seconds and it will automatically guide you to the [localhost:3000](http://localhost:3000) to whatever browser used in your computer / laptop.
 
