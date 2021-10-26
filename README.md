@@ -23,6 +23,18 @@ npm run dev
 npm run test    
 ```
 
+## Acknowledgements
+
+* [Next.js](https://nextjs.org)
+* [Commerce.js](https://www.npmjs.com/package/@chec/commerce.js)
+* [Stripe.js](https://www.npmjs.com/package/@stripe/stripe-js)
+* [React Stripe.js](https://www.npmjs.com/package/@stripe/react-stripe-js)
+* [Next.js CORS](https://www.npmjs.com/package/nextjs-cors)
+* [Nookies](https://www.npmjs.com/package/nookies)
+* [React.js](https://www.npmjs.com/package/react)
+* [React.js DOM](https://www.npmjs.com/package/react-dom)
+* [Theme UI](https://www.npmjs.com/package/theme-ui)
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
