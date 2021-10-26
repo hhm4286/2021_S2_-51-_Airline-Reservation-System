@@ -1,18 +1,31 @@
-# 2021_S2_-51-_Airline-Reservation-System
-## Setting up
-* Clone the repository in VS Code: 
+<h1 align="center">Welcome to airline-reservation-system 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-![alt text](https://media.discordapp.net/attachments/115599738681688064/876048824248987658/unknown.png "clone repo")
----
-* Open a terminal and run `npm install` in the root directory of the project:
+> A [Next.js](https://nextjs.org) webapp for booking flights around New Zealand. Powered by [Commerce.js](https://commercejs.com/)
 
-![alt text](https://media.discordapp.net/attachments/115599738681688064/876053843018919936/unknown.png "npm install")
----
-* Switch to the `develop` branch or create a new feature branch:
+## Install
 
-![alt text](https://cdn.discordapp.com/attachments/115599738681688064/876055971498164284/unknown.png "switch branch")
----
-* Start Coding!
+```sh
+npm install     
+```
 
-## Running
-* To run the project run `npm run dev` in a terminal and navigate to [localhost:3000](http://localhost:3000) with your preferred browser.
+## Usage
+
+```sh
+npm run start
+```
+
+## Run tests
+
+```sh
+npm run test    
+```
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
