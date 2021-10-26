@@ -19,7 +19,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const { data: products } = await commerce.products.list();
+  const { data: products } = await commerce.products.list(); //uses commerce api to pull in products
 
   return {
     paths: products.map((product) => ({

@@ -6,7 +6,7 @@ const CartDispatchContext = createContext();
 
 const SET_CART = "SET_CART";
 
-const initialState = {
+const initialState = {  //creates a new empty cart 
   total_items: 0,
   total_unique_items: 0,
   line_items: [],

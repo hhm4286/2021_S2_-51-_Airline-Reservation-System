@@ -12,7 +12,7 @@ const InvalidPage = () => {
     // }, [])
     return (
     <div>
-      <Head><title>Error 404 - Skyhub</title></Head>   
+      <Head><title>Success! - Skyhub</title></Head>   
       <div className = "d-flex align-items-center bg-light" >
         <nav className = "navbar navbar-expand-lg navbar navbar-light bg-light">
           <button className = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarTogglerDemo03" aria-controls = "navbarTogglerDemo03" aria-expanded = "false" aria-label = "Toggle navigation">

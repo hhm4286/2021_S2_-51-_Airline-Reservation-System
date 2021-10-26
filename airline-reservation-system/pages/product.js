@@ -5,8 +5,8 @@ import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export async function getStaticProps() {
-  const { data: products } = await commerce.products.list();
-  const { data: categories } = await commerce.categories.list();
+  const { data: products } = await commerce.products.list(); //pulls in products
+  const { data: categories } = await commerce.categories.list();//pulls in categories
 
   return {
     props: {
