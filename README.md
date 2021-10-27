@@ -1,23 +1,43 @@
-# 2021_S2_-51-_Airline-Reservation-System
-## Setting up
-* Clone the repository in VS Code: 
+<h1 align="center">Welcome to airline-reservation-system 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-![alt text](https://media.discordapp.net/attachments/115599738681688064/876048824248987658/unknown.png "clone repo")
----
-* Open a terminal and run `npm install` in the root directory of the project:
+> A [Next.js](https://nextjs.org) webapp for booking flights around New Zealand. Powered by [Commerce.js](https://commercejs.com/)
 
-![alt text](https://media.discordapp.net/attachments/115599738681688064/876053843018919936/unknown.png "npm install")
----
-* Switch to the `develop` branch or create a new feature branch:
+## Install
 
-![alt text](https://cdn.discordapp.com/attachments/115599738681688064/876055971498164284/unknown.png "switch branch")
----
-* Start Coding!
+```sh
+npm install     
+```
 
-## Running
-* To run the project run `npm run dev` in a terminal and navigate to [localhost:3000](http://localhost:3000) with your preferred browser.
+## Usage
 
-# REACT - JS 
-* First thing to do is to open the terminal by clicking Ctrl + j on the keyboard in Visual Studio Code and type 'npm install'
-* Secondly, to run the project, click `npm start` with the waiting time around 10 seconds and it will automatically guide you to the [localhost:3000](http://localhost:3000) to whatever browser used in your computer / laptop.
+```sh
+npm run dev
+```
 
+## Run tests
+
+```sh
+npm run test    
+```
+
+## Acknowledgements
+
+* [Next.js](https://nextjs.org)
+* [Commerce.js](https://www.npmjs.com/package/@chec/commerce.js)
+* [Stripe.js](https://www.npmjs.com/package/@stripe/stripe-js)
+* [React Stripe.js](https://www.npmjs.com/package/@stripe/react-stripe-js)
+* [Next.js CORS](https://www.npmjs.com/package/nextjs-cors)
+* [Nookies](https://www.npmjs.com/package/nookies)
+* [React.js](https://www.npmjs.com/package/react)
+* [React.js DOM](https://www.npmjs.com/package/react-dom)
+* [Theme UI](https://www.npmjs.com/package/theme-ui)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
